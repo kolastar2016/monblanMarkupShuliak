@@ -4,8 +4,746 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>monblanproject</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h2>Test start</h2>
+    <div class="bg-decor bg-decor--left">
+        <img src="images/bg-left.svg" alt="bg left">
+    </div>
+    <div class="bg-decor bg-decor--right">
+        <img src="images/bg-right.svg" alt="bg right">
+    </div>
+
+    <header class="header">
+        <div class="header__inner">
+        <div class="profile">
+            <div class="profile__avatar">
+                <img src="images/logo.svg" alt="monblanproject logo">
+            </div>
+            <div class="profile__info">
+                <div class="profile__top">
+                    <h2 class="profile__name">monblanproject</h2>
+                    <span class="profile__badge">Start on  17-02-2016</span>
+                </div>
+                <div class="profile__stats">
+                    <span class="profile__stat"><strong>870</strong> posts</span>
+                    <span class="profile__stat"><strong>11,787</strong> followers</span>
+                    <span class="profile__stat"><strong>112</strong> following</span>
+                </div>
+                <div class="filters">
+                    <span class="filters__label">Date</span>
+                    <div class="filters__field" data-datepicker>
+                        <input type="text" placeholder="from" class="datepicker-input">
+                        <button class="filters__clear" aria-label="Clear">&times;</button>
+                        <span class="filters__sep"></span>
+                        <button class="filters__calendar" aria-label="Calendar">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="4" width="18" height="18" rx="2" stroke="#636264" stroke-width="2"/>
+                            <path d="M3 10h18" stroke="#636264" stroke-width="2"/>
+                            <path d="M8 2v4M16 2v4" stroke="#636264" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="filters__field" data-datepicker>
+                        <input type="text" value="09_08_2016" placeholder="to"  class="datepicker-input">
+                        <button class="filters__clear" aria-label="Clear">&times;</button>
+                        <span class="filters__sep"></span>
+                        <button class="filters__calendar" aria-label="Calendar">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="4" width="18" height="18" rx="2" stroke="#636264" stroke-width="2"/>
+                            <path d="M3 10h18" stroke="#636264" stroke-width="2"/>
+                            <path d="M8 2v4M16 2v4" stroke="#636264" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="view-toggle">
+            <button class="view-toggle__btn view-toggle__btn--grid active" aria-label="Grid view" data-view="grid">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <rect x="0" y="0" width="6" height="6" fill="currentColor"/>
+                    <rect x="8" y="0" width="6" height="6" fill="currentColor"/>
+                    <rect x="16" y="0" width="6" height="6" fill="currentColor"/>
+                    <rect x="0" y="8" width="6" height="6" fill="currentColor"/>
+                    <rect x="8" y="8" width="6" height="6" fill="currentColor"/>
+                    <rect x="16" y="8" width="6" height="6" fill="currentColor"/>
+                    <rect x="0" y="16" width="6" height="6" fill="currentColor"/>
+                    <rect x="8" y="16" width="6" height="6" fill="currentColor"/>
+                    <rect x="16" y="16" width="6" height="6" fill="currentColor"/>
+                </svg>
+            </button>
+            <button class="view-toggle__btn view-toggle__btn--list" aria-label="List view" data-view="list">
+                <svg width="25" height="22" viewBox="0 0 25 22" fill="none">
+                    <rect x="0" y="0" width="6" height="6" fill="currentColor"/>
+                    <rect x="0" y="8" width="6" height="6" fill="currentColor"/>
+                    <rect x="0" y="16" width="6" height="6" fill="currentColor"/>
+                    <rect x="9" y="2" width="16" height="2" fill="currentColor"/>
+                    <rect x="9" y="10" width="16" height="2" fill="currentColor"/>
+                    <rect x="9" y="18" width="16" height="2" fill="currentColor"/>
+                </svg>
+            </button>
+        </div>
+        <div class="posts posts--grid" id="posts">
+            <article class="post post--special-g">
+                <div class="post__image">
+                <img src="images/post1.jpg" alt="Post image">
+                </div>
+                <div class="post__info">
+                <div class="post__col post__col--date-left">
+                    <span class="post__date-label">Today</span>
+                    <div class="post__metrics">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        128
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        31
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col post__col--date-right">
+                    <span class="post__date">9-08-2016</span>
+                    <div class="post__metrics">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        67
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        22
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col post__col--upload">
+                    <span class="post__upload-label">Image upload</span>
+                    <span class="post__upload-date">11-04-2016</span>
+                </div>
+                </div>
+            </article>
+
+            <article class="post post--special-g">
+                <div class="post__image">
+                <img src="images/post2.jpg" alt="Post image">
+                </div>
+                <div class="post__info">
+                <div class="post__col post__col--date-left">
+                    <span class="post__date-label">Today</span>
+                    <div class="post__metrics">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        128
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        31
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col post__col--date-right">
+                    <span class="post__date">9-08-2016</span>
+                    <div class="post__metrics">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        67
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        22
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col post__col--upload">
+                    <span class="post__upload-label">Image upload</span>
+                    <span class="post__upload-date">11-04-2016</span>
+                </div>
+                </div>
+            </article>
+
+            <article class="post post--special-g">
+                <div class="post__image">
+                <img src="images/post3.jpg" alt="Post image">
+                </div>
+                <div class="post__info">
+                <div class="post__col post__col--date-left">
+                    <span class="post__date-label">Today</span>
+                    <div class="post__metrics">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        128
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        31
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col post__col--date-right">
+                    <span class="post__date">9-08-2016</span>
+                    <div class="post__metrics">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        67
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        22
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col post__col--upload">
+                    <span class="post__upload-label">Image upload</span>
+                    <span class="post__upload-date">11-04-2016</span>
+                </div>
+                </div>
+            </article>
+
+            <article class="post post--special-g">
+                <div class="post__image">
+                <img src="images/post4.jpg" alt="Post image">
+                </div>
+                <div class="post__info">
+                <div class="post__col post__col--date-left">
+                    <span class="post__date-label">Today</span>
+                    <div class="post__metrics">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        128
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        31
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col post__col--date-right">
+                    <span class="post__date">9-08-2016</span>
+                    <div class="post__metrics">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        67
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        22
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col post__col--upload">
+                    <span class="post__upload-label">Image upload</span>
+                    <span class="post__upload-date">11-04-2016</span>
+                </div>
+                </div>
+            </article>
+
+            <article class="post post--special-g">
+                <div class="post__image">
+                <img src="images/post5.jpg" alt="Post image">
+                </div>
+                <div class="post__info">
+                <div class="post__col post__col--date-left">
+                    <span class="post__date-label">Today</span>
+                    <div class="post__metrics">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        128
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        31
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col post__col--date-right">
+                    <span class="post__date">9-08-2016</span>
+                    <div class="post__metrics">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        67
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        22
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col post__col--upload">
+                    <span class="post__upload-label">Image upload</span>
+                    <span class="post__upload-date">11-04-2016</span>
+                </div>
+                </div>
+            </article>
+
+            <article class="post post--special-g">
+                <div class="post__image">
+                <img src="images/post6.jpg" alt="Post image">
+                </div>
+                <div class="post__info">
+                <div class="post__col post__col--date-left">
+                    <span class="post__date-label">Today</span>
+                    <div class="post__metrics">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        128
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        31
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col post__col--date-right">
+                    <span class="post__date">9-08-2016</span>
+                    <div class="post__metrics">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        67
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        22
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col post__col--upload">
+                    <span class="post__upload-label">Image upload</span>
+                    <span class="post__upload-date">11-04-2016</span>
+                </div>
+                </div>
+            </article>
+
+            <article class="post post--special-g">
+                <div class="post__image">
+                <img src="images/post7.jpg" alt="Post image">
+                </div>
+                <div class="post__info">
+                <div class="post__col post__col--date-left">
+                    <span class="post__date-label">Today</span>
+                    <div class="post__metrics">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        128
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        31
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col post__col--date-right">
+                    <span class="post__date">9-08-2016</span>
+                    <div class="post__metrics">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        67
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        22
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col post__col--upload">
+                    <span class="post__upload-label">Image upload</span>
+                    <span class="post__upload-date">11-04-2016</span>
+                </div>
+                </div>
+            </article>
+
+            <article class="post post--special-g">
+                <div class="post__image">
+                <img src="images/post8.jpg" alt="Post image">
+                </div>
+                <div class="post__info">
+                <div class="post__col post__col--date-left">
+                    <span class="post__date-label">Today</span>
+                    <div class="post__metrics">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        128
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        31
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col post__col--date-right">
+                    <span class="post__date">9-08-2016</span>
+                    <div class="post__metrics">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        67
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        22
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col post__col--upload">
+                    <span class="post__upload-label">Image upload</span>
+                    <span class="post__upload-date">11-04-2016</span>
+                </div>
+                </div>
+            </article>
+
+            <article class="post post--special-g">
+                <div class="post__image">
+                <img src="images/post9.jpg" alt="Post image">
+                </div>
+                <div class="post__info">
+                <div class="post__col post__col--date-left">
+                    <span class="post__date-label">Today</span>
+                    <div class="post__metrics">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        128
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        31
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col post__col--date-right">
+                    <span class="post__date">9-08-2016</span>
+                    <div class="post__metrics">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        67
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        22
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col post__col--upload">
+                    <span class="post__upload-label">Image upload</span>
+                    <span class="post__upload-date">11-04-2016</span>
+                </div>
+                </div>
+            </article>
+
+            <article class="post post--special-l">
+                <div class="post__image">
+                <img src="images/post11.jpg" alt="Post image">
+                </div>
+                <div class="post__info">
+                <div class="post__col">
+                    <span class="post__date-label">Today</span>
+                    <span class="post__date">9-08-2016</span>
+                </div>
+                <div class="post__col post__col-middle">
+                    <div class="post__metrics post__metrics-col">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        128
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        31
+                    </span>
+                    </div>
+                    <div class="post__metrics post__metrics-col">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        67
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        22
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col">
+                    <span class="post__upload-label">Image upload</span>
+                    <span class="post__upload-date">11-04-2016</span>
+                </div>
+                </div>
+            </article>
+            
+            <article class="post post--special-l">
+                <div class="post__image">
+                <img src="images/post12.jpg" alt="Post image">
+                </div>
+                <div class="post__info">
+                <div class="post__col">
+                    <span class="post__date-label">Today</span>
+                    <span class="post__date">9-08-2016</span>
+                </div>
+                <div class="post__col post__col-middle">
+                    <div class="post__metrics post__metrics-col">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        128
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        31
+                    </span>
+                    </div>
+                    <div class="post__metrics post__metrics-col">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        67
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        22
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col">
+                    <span class="post__upload-label">Image upload</span>
+                    <span class="post__upload-date">11-04-2016</span>
+                </div>
+                </div>
+            </article>
+            
+            <article class="post post--special-l">
+                <div class="post__image">
+                <img src="images/post13.jpg" alt="Post image">
+                </div>
+                <div class="post__info">
+                <div class="post__col">
+                    <span class="post__date-label">Today</span>
+                    <span class="post__date">9-08-2016</span>
+                </div>
+                <div class="post__col post__col-middle">
+                    <div class="post__metrics post__metrics-col">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        128
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        31
+                    </span>
+                    </div>
+                    <div class="post__metrics post__metrics-col">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        67
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        22
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col">
+                    <span class="post__upload-label">Image upload</span>
+                    <span class="post__upload-date">11-04-2016</span>
+                </div>
+                </div>
+            </article>
+            
+            <article class="post post--special-l">
+                <div class="post__image">
+                <img src="images/post11.jpg" alt="Post image">
+                </div>
+                <div class="post__info">
+                <div class="post__col">
+                    <span class="post__date-label">Today</span>
+                    <span class="post__date">9-08-2016</span>
+                </div>
+                <div class="post__col post__col-middle">
+                    <div class="post__metrics post__metrics-col">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        128
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        31
+                    </span>
+                    </div>
+                    <div class="post__metrics post__metrics-col">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        67
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        22
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col">
+                    <span class="post__upload-label">Image upload</span>
+                    <span class="post__upload-date">11-04-2016</span>
+                </div>
+                </div>
+            </article>
+            
+            <article class="post post--special-l">
+                <div class="post__image">
+                <img src="images/post14.jpg" alt="Post image">
+                </div>
+                <div class="post__info">
+                <div class="post__col">
+                    <span class="post__date-label">Today</span>
+                    <span class="post__date">9-08-2016</span>
+                </div>
+                <div class="post__col post__col-middle">
+                    <div class="post__metrics post__metrics-col">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        128
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        31
+                    </span>
+                    </div>
+                    <div class="post__metrics post__metrics-col">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        67
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        22
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col">
+                    <span class="post__upload-label">Image upload</span>
+                    <span class="post__upload-date">11-04-2016</span>
+                </div>
+                </div>
+            </article>
+            
+            <article class="post post--special-l">
+                <div class="post__image">
+                <img src="images/post15.jpg" alt="Post image">
+                </div>
+                <div class="post__info">
+                <div class="post__col">
+                    <span class="post__date-label">Today</span>
+                    <span class="post__date">9-08-2016</span>
+                </div>
+                <div class="post__col post__col-middle">
+                    <div class="post__metrics post__metrics-col">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        128
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        31
+                    </span>
+                    </div>
+                    <div class="post__metrics post__metrics-col">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        67
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        22
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col">
+                    <span class="post__upload-label">Image upload</span>
+                    <span class="post__upload-date">11-04-2016</span>
+                </div>
+                </div>
+            </article>
+            
+            <article class="post post--special-l">
+                <div class="post__image">
+                <img src="images/post16.jpg" alt="Post image">
+                </div>
+                <div class="post__info">
+                <div class="post__col">
+                    <span class="post__date-label">Today</span>
+                    <span class="post__date">9-08-2016</span>
+                </div>
+                <div class="post__col post__col-middle">
+                    <div class="post__metrics post__metrics-col">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        128
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        31
+                    </span>
+                    </div>
+                    <div class="post__metrics post__metrics-col">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        67
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        22
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col">
+                    <span class="post__upload-label">Image upload</span>
+                    <span class="post__upload-date">11-04-2016</span>
+                </div>
+                </div>
+            </article>
+            
+            <article class="post post--special-l">
+                <div class="post__image">
+                <img src="images/post17.jpg" alt="Post image">
+                </div>
+                <div class="post__info">
+                <div class="post__col">
+                    <span class="post__date-label">Today</span>
+                    <span class="post__date">9-08-2016</span>
+                </div>
+                <div class="post__col post__col-middle">
+                    <div class="post__metrics post__metrics-col">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        128
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        31
+                    </span>
+                    </div>
+                    <div class="post__metrics post__metrics-col">
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        67
+                    </span>
+                    <span class="post__metric">
+                        <svg class="post__icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/></svg>
+                        22
+                    </span>
+                    </div>
+                </div>
+                <div class="post__col">
+                    <span class="post__upload-label">Image upload</span>
+                    <span class="post__upload-date">11-04-2016</span>
+                </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="load-more">
+            <button class="load-more__btn">LOAD MORE</button>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
